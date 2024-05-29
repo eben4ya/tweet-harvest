@@ -57,7 +57,7 @@ export type CrawlParams = {
   DEBUG_MODE?: boolean;
   OUTPUT_FILENAME?: string;
   TWEET_THREAD_URL?: string;
-  SEARCH_TAB?: "LATEST" | "TOP";
+  SEARCH_TAB?: "LATEST" | "TOP" | "CUSTOM";
   CSV_INSERT_MODE?: "REPLACE" | "APPEND";
 };
 
@@ -81,6 +81,7 @@ export async function crawl({
 
   const IS_DETAIL_MODE = CRAWL_MODE === "DETAIL";
   const IS_SEARCH_MODE = CRAWL_MODE === "SEARCH";
+  // const IS_SEARCH_MODE = true;
   const REACH_TIMEOUT_MAX = 3;
   const TIMEOUT_LIMIT = 20;
 
